@@ -1,0 +1,20 @@
+.Toastify__toast {
+    @apply bg-gradient-to-b from-gray-800 to-gray-900 rounded-md shadow-md p-3 text-gray-100 font-medium;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.Toastify__toast--success {
+    @apply bg-blue-500 text-white;
+}
+
+.Toastify__toast--error {
+    @apply bg-red-600 text-white;
+}
+
+.Toastify__toast-body {
+    @apply text-sm text-gray-100;
+}
+
+.Toastify__close-button {
+    @apply text-gray-100 hover:text-white;
+}

@@ -1,10 +1,12 @@
 import clsx from "clsx";
-import { HTMLInputTypeAttribute } from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 
 type Props = {
   className?: string;
   placeholder?: string;
   type?: HTMLInputTypeAttribute;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
 };
 

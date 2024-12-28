@@ -5,6 +5,7 @@ type Props = {
   className?: string;
   children?: React.ReactNode;
   type?: "submit";
+  disabled?: boolean;
 };
 
 export function Button({ className, children, ...rest }: Props) {

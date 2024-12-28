@@ -1,10 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./app";
-import "./index.css";
+import "./assets/styles/styles.css";
+import "./assets/styles/toastify.css";
+import { Provider } from "react-redux";
+import store from "./shared/redux/store.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>,
 );
