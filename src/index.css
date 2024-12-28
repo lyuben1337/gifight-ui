@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Exo 2 */
+@font-face {
+    font-family: "Exo 2";
+    src: url("./assets/fonts/Exo_2/Exo2-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900; /* Supports a range of weights */
+    font-style: normal;
+}
+
+/* Exo 2 Italic */
+@font-face {
+    font-family: "Exo 2";
+    src: url("./assets/fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900; /* Supports a range of weights */
+    font-style: italic;
+}
+
+
