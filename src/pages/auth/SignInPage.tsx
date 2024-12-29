@@ -12,26 +12,20 @@ import { useNavigate } from "react-router";
 import { AppDispatch, RootState } from "../../shared/redux/store.ts";
 import { signIn } from "../../shared/redux/authSlice.ts";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
 
 export function SignInPage() {
   const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoading, error } = useSelector((state: RootState) => state.auth);
+  const { isLoading } = useSelector((state: RootState) => state.auth);
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error.message);
-    }
-  }, [error]);
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     const action = await dispatch(signIn({ username, password }));
     if (signIn.fulfilled.match(action)) {
-      navigate("/");
+      toast.info("Successfully authenticated!");
+      navigate(`/`);
     }
   };
 
